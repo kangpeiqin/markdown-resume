@@ -1,0 +1,71 @@
+/* 预览模式下的样式 */
+.a4-page h1, .a4-page h2, .a4-page h3, .a4-page h4, .a4-page h5, .a4-page h6 {
+  color: #333;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.a4-page h1 {
+  font-size: 1.8em;
+  border-bottom: 2px solid #eaecef;
+  padding-bottom: 0.3em;
+}
+
+.a4-page h2 {
+  font-size: 1.5em;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 0.3em;
+}
+
+.a4-page p {
+  margin: 0.5em 0;
+  line-height: 1.5;
+}
+
+.a4-page ul, .a4-page ol {
+  padding-left: 2em;
+  margin: 0.5em 0;
+}
+
+.a4-page table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+.a4-page table th, .a4-page table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.a4-page table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.a4-page a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.a4-page a:hover {
+  text-decoration: underline;
+}
+
+/* 打印样式 */
+@media print {
+  .resume-preview {
+    padding: 0;
+    background-color: white;
+  }
+  
+  .a4-page {
+    box-shadow: none;
+    padding: 0;
+    width: 100%;
+  }
+  
+  header {
+    display: none;
+  }
+}

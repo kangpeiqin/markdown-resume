@@ -27,12 +27,12 @@ header {
 
 .header-link {
     font-weight: 600px;
-    color: white;
+    color: black;
     white-space: nowrap;
     cursor: pointer;
     user-select: none;
     margin-left: 1rem;
-    background-color: black;
+    /* background-color: black; */
 }
 
 .header-link :hover {
