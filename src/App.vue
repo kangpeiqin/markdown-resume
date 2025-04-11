@@ -2,7 +2,7 @@
   <div id="app">
     <header class="minimal-header">
       <div class="header-left">
-        <a href="/">简历生成器</a>
+        <a href="/">Markdown Resume</a>
       </div>
       <div class="header-right">
         <div v-if="isEditing" class="header-action">
@@ -49,7 +49,7 @@
     <!-- 添加页脚 -->
     <footer class="app-footer minimal-footer">
       <div class="footer-content">
-        <p>© 2023 简历生成器</p>
+        <p>© {{ new Date().getFullYear() }} Markdown Resume</p>
       </div>
     </footer>
   </div>
@@ -216,172 +216,5 @@ export default {
 </script>
 
 <style>
-/* 全局样式 */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  color: #333;
-  background-color: #fafafa;
-}
 
-#app {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* 极简风格的头部 */
-.minimal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  height: 50px;
-  background-color: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.header-right {
-  display: flex;
-  align-items: center;
-}
-
-/* 修改所有导航链接的样式 */
-.header-left a, .header-link {
-  color: #000 !important; /* 使用!important确保覆盖其他样式 */
-  text-decoration: none;
-  font-weight: 600; /* 加粗字体 */
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.header-left a:hover, .header-link:hover {
-  color: #007aff !important; /* 确保悬停颜色也能覆盖其他样式 */
-}
-
-/* 确保右侧导航项的样式 */
-.header-right .header-link {
-  color: #000 !important;
-  margin: 0 10px;
-}
-
-.header-action {
-  margin-right: 20px;
-}
-
-/* 下拉菜单样式 */
-.dropdown {
-  position: relative;
-  margin-left: 20px;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 30px;
-  background-color: #fff;
-  min-width: 120px;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  z-index: 10;
-  overflow: hidden;
-}
-
-.dropdown-content a {
-  color: #333;  /* 确保下拉菜单中的文字颜色为深灰色 */
-  padding: 10px 15px;
-  display: block;
-  text-decoration: none;
-  font-size: 14px;
-  transition: background-color 0.2s;
-}
-
-.dropdown-content a:hover {
-  background-color: #f5f5f5;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* A4纸张样式 */
-.minimal-preview {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 30px;
-  background-color: #f5f5f5;
-  overflow-y: auto;
-}
-
-.a4-page {
-  width: 210mm;
-  min-height: 297mm;
-  padding: 20mm;
-  background-color: white;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  overflow-y: visible;
-}
-
-/* 编辑器样式 */
-.minimal-editor {
-  flex: 1;
-}
-
-/* 页脚样式 */
-.minimal-footer {
-  height: 34px;
-  background-color: #fff;
-  color: #666;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top: 1px solid #eee;
-}
-
-.footer-content p {
-  margin: 0;
-  font-size: 12px;
-}
-
-/* 响应式调整 */
-@media screen and (max-width: 800px) {
-  .a4-page {
-    width: 100%;
-    padding: 15px;
-  }
-  
-  .minimal-header {
-    padding: 0 10px;
-  }
-  
-  .header-action {
-    margin-right: 10px;
-  }
-  
-  .dropdown {
-    margin-left: 10px;
-  }
-}
-
-/* 打印时隐藏页脚和头部 */
-@media print {
-  .minimal-header, .minimal-footer {
-    display: none;
-  }
-  
-  .minimal-preview {
-    padding: 0;
-    background-color: white;
-  }
-  
-  .a4-page {
-    box-shadow: none;
-    padding: 0;
-    width: 100%;
-  }
-}
 </style>
